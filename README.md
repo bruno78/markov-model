@@ -12,7 +12,7 @@ The process starts by selecting a random word or a sequence of n words from the 
 
 ### Using characters
 
-First, it started by coding with characters. Beginning with case 0 which just select random characters. The use of one character that would be used to predict the next and this 'next' will be used to predict next and so forth. Next steps were done with 2, 4, and then a model that can be done with n numbers of consecutive characters determined by user input.
+First, it started by coding with characters. Beginning with case 0 which just select random characters. The use of 1 character that would be used to predict the next and this 'next' will be used to predict next and so forth. Next steps were done with 2, 4, and then a model that can be done with n numbers of consecutive characters determined by user input.
 
 The examples below are based on Confucius text. The result is based on 500 random characters from the text, and can be reproduceable with their respective seeds:
 
