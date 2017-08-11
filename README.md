@@ -14,16 +14,18 @@ The process starts by selecting a random word or a sequence of n words from the 
 
 First, it started by coding with characters. Beginning with case 0 which just select random characters. The use of one character that would be used to predict the next and this 'next' will be used to predict next and so forth. Next steps were done with 2, 4, and then a model that can be done with n numbers of consecutive characters determined by user input.
 
-*Case 0 character - Markov Zero:*
+The examples below are based on Confucius text. Their characters are based on 500 random characters from the text, and can be reproduceable with their respective seeds:
+
+*Case 0 character - Markov Zero @ seed: 1024:*
 <div style="text-align:center"><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovCharZero.png" alt="Markov Model Char 0" /></div>
 
-*Case 1 character - Markov One:*
+*Case 1 character - Markov One @ seed: 365:*
 <div style="text-align:center"><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovCharOne.png" alt="Markov Model Char 1" /></div>
 
-*Case 4 characters - Markov Four:*
+*Case 4 characters - Markov Four @ seed: 715*
 <div style="text-align:center"><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovCharFour.png" alt="Markov Model Char 4" /></div>
 
-*Case 7 characters - Markov Model (N):*
+*Case 7 characters - Markov Model (N) @ seed: 953:*
 <div style="text-align:center"><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovCharModel7.png" alt="Markov Model Char 7" /></div>
 
 ### Using words
@@ -48,4 +50,4 @@ After:
 
 Once the cases were created and tested, they can be easily generalized and these generalizations can be put into a Interface and Abstract class. The final result is a Markov Model that can be extend either for using characters or words in the order of N.
 
-<div style="text-align:center"><img src ="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovStructure.png" /></div>
+<p align="center"><img src ="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovStructure.png" /></div>
