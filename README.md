@@ -6,9 +6,13 @@ This project is the early stage of analysis using the Markov Model. According to
 
 In this case we are using the Markov model to predict the next word based on one or on n number of previous words using a training text as reference.
 
+## Test Cases
+
+## Random case
+
 The process starts by selecting a random word or a sequence of n words from the training text, then getting its next word and adding to a string, limited by a given length of words. Then it takes the previous word or n words (just added to the string) and find the next word and so on, creating a chain of words.
 
-## The process - Test Cases
+### Process
 
 ### Using characters
 
@@ -48,8 +52,14 @@ Before:
 After:
 <div><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovModelEFFCompare-Order2-2.png" alt="Markov Model Order of 2 words" /></div>
 
-## Final structure:
+### Result structure (UML):
 
 Once the cases were created and tested, they can be easily generalized and these generalizations can be put into a Interface and Abstract class. The final result is a Markov Model that can be extend either for using characters or words in the order of N.
 
 <p align="center"><img src ="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovStructure.png" alt="Markov Model Structure" /></div>
+
+## Probability Case
+
+In the next case the word or words are mapped with its occurrences, then these occurrences are quantified and transformed into probabilities. The highest number of a occurrence, the highest is the probability of occur again, and instead choose the word or words solely by random, choose them by probability now.
+
+(_ongoing study_)
