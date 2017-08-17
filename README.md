@@ -42,7 +42,7 @@ The case below is based on Confucius text, using 2 consecutive words to predict 
 
 ### Problems
 
-The program is a bit inneficient since it stumbles on the possibility to check the same sequence of character(s) or word(s) multiple times. The best solution for this case is to map these occurrences to a HashMap.
+The program is a bit inefficient since it stumbles on the possibility to check the same sequence of character(s) or word(s) multiple times. The best solution for this case is to map these occurrences to a HashMap.
 
 Comparing efficiency before and after mapping words using Confucius text with a model order of 2, with text length set to 1000 @ seed 42.:
 
@@ -57,6 +57,23 @@ After:
 Once the cases were created and tested, they can be easily generalized and these generalizations can be put into a Interface and Abstract class. The final result is a Markov Model that can be extend either for using characters or words in the order of N.
 
 <p align="center"><img src ="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovStructure.png" alt="Markov Model Structure" /></div>
+
+#### Interface _IMarkovModel_
+
+Provides 3 methods:
+* *setTraining*
+* *setRandom*
+* *getRandomText*
+
+#### Abstract class AbstractMarkovModel
+
+Implements _IMarkovModel_ interface defining the methods' behavior. The class constructor takes an argument (N) which sets the number of words/character to be used. The constructor also initializes the myRandom variable which will be used in the setRandom method.
+
+* *setTraining*: defines the training text to be used
+* *setRandom*: accepts an argument to set a seed for testing
+* *getRandomText*: it takes a number as an argument to set the limit of characters/words to be generated.
+
+####
 
 ## Probability Case
 
