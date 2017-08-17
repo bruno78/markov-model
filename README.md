@@ -36,7 +36,7 @@ The examples below are based on Confucius text. The result is based on 500 rando
 
 Once using characters passed the test, the next step was to use words. The principle is basic the same, but instead of picking characters from the text, the case is word.
 
-The case below is based on Confucius text, with word length set to 120 and seed 65:
+The case below is based on Confucius text, using 2 consecutive words to predict the next (N = 2), word length set to 120 and seed 65:
 
 <div style="text-align:center"><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovWordGramO2.png" alt="Markov Model Order of 2 words" /></div>
 
