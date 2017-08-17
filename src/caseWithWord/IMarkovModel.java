@@ -1,4 +1,4 @@
-package TestWithWord;
+package caseWithWord;
 
 public interface IMarkovModel {
     public void setTraining(String text);

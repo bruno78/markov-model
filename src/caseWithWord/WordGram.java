@@ -1,4 +1,4 @@
-package TestWithWord;
+package caseWithWord;
 
 public class WordGram {
     private String[] myWords;

@@ -1,4 +1,4 @@
-package TestWithWord;
+package caseWithWord;
 
 import edu.duke.*;
 

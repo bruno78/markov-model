@@ -1,30 +1,13 @@
-package RandomChar;
+package efficientMarkovModelWord;
 
 import java.util.Random;
 import java.util.ArrayList;
 
-public class MarkovModel
+public class MarkovModel extends AbstractMarkovModel
 {
-    private String myText;
-    private Random myRandom;
-    private int nOrder;
 
     public MarkovModel(int n) {
-        myRandom = new Random();
-        nOrder = n;
-    }
-
-    public ArrayList<String> getFollows(String key){
-        ArrayList<String> follows = new ArrayList<String>();
-        int keyLength = key.length();
-        for (int i = 0; i < myText.length() - keyLength; i++){
-
-            if(key.equals(myText.substring(i, i + keyLength))){
-                follows.add(myText.substring(i + keyLength, i + keyLength +1));
-            }
-        }
-
-        return follows;
+        super(n);
     }
 
     public void setRandom(int seed){
@@ -53,5 +36,8 @@ public class MarkovModel
             key = key.substring(1) + next;
         }
         return sb.toString();
+    }
+        public String toString(){
+        return ("MarkovModel of order " + nOrder);
     }
 }

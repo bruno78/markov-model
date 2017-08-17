@@ -1,15 +1,17 @@
-package RandomChar;
+package randomChar;
 
 import java.util.Random;
 import java.util.ArrayList;
 
-public class MarkovFour
+public class MarkovModel
 {
     private String myText;
     private Random myRandom;
+    private int nOrder;
 
-    public MarkovFour() {
+    public MarkovModel(int n) {
         myRandom = new Random();
+        nOrder = n;
     }
 
     public ArrayList<String> getFollows(String key){
@@ -21,16 +23,7 @@ public class MarkovFour
                 follows.add(myText.substring(i + keyLength, i + keyLength +1));
             }
         }
-        /*
-        int pos = 0;
-        while (pos < myText.length() - key.length()){
-            pos = myText.indexOf(key, pos+1) + key.length();
-            if(pos >= myText.length() || pos == 0){
-                break;
-            }
-            follows.add(myText.substring(pos, pos+1));
-        }
-        */
+
         return follows;
     }
 
@@ -45,11 +38,11 @@ public class MarkovFour
     public String getRandomText(int numChars){
 
         StringBuffer sb = new StringBuffer();
-        int index = myRandom.nextInt(myText.length()-4);
-        String key = myText.substring(index, index+4);
+        int index = myRandom.nextInt(myText.length()-nOrder);
+        String key = myText.substring(index, index+nOrder);
         sb.append(key);
 
-        for(int i = 0; i < numChars-4; i++){
+        for(int i = 0; i < numChars-nOrder; i++){
             ArrayList<String> follows = getFollows(key);
             if(follows.size() == 0){
                 break;

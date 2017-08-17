@@ -1,4 +1,4 @@
-package EfficientMarkovModelWord;
+package efficientMarkovModelWord;
 
 public interface IMarkovModel {
     public void setTraining(String text);

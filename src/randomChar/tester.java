@@ -1,4 +1,4 @@
-package RandomChar;
+package randomChar;
 
 import edu.duke.*;
 

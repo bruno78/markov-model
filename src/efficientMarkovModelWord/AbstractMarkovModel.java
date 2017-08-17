@@ -1,4 +1,4 @@
-package EfficientMarkovModelWord;
+package efficientMarkovModelWord;
 
 import java.util.*;
 
