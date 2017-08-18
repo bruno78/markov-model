@@ -14,7 +14,7 @@ The process starts by selecting a random word or a sequence of n words from the 
 
 ### Process
 
-### Using characters
+### Using characters - randomChar package
 
 First, it started by coding with characters. Beginning with case 0 which just select random characters. The use of 1 character that would be used to predict the next and this 'next' will be used to predict next and so forth. Next steps were done with 2, 4, and then a model that can be done with n numbers of consecutive characters determined by user input.
 
@@ -32,7 +32,7 @@ The examples below are based on Confucius text. The result is based on 500 rando
 *Case 7 characters - Markov Model (N) @ seed: 953:*
 <div style="text-align:center"><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovCharModel7.png" alt="Markov Model Char 7" /></div>
 
-### Using words
+### Using words - caseWithWord package
 
 Once using characters passed the test, the next step was to use words. The principle is basic the same, but instead of picking characters from the text, the case is word.
 
@@ -52,7 +52,7 @@ Before:
 After:
 <div><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovModelEFFCompare-Order2-2.png" alt="Markov Model Order of 2 words" /></div>
 
-### Result structure (UML):
+### Result structure (UML) - efficientMarkovModelWord package:
 
 Once the cases were created and tested, they can be easily generalized and these generalizations can be put into a Interface and Abstract class. The final result is a Markov Model that can be extend either for using characters or words in the order of N.
 
@@ -70,10 +70,20 @@ Provides 3 methods:
 Implements _IMarkovModel_ interface defining the methods' behavior. The class constructor takes an argument (N) which sets the number of words/character to be used. The constructor also initializes the myRandom variable which will be used in the setRandom method.
 
 * *setTraining*: defines the training text to be used
-* *setRandom*: accepts an argument to set a seed for testing
+* *setRandom*: accepts an integer as argument to set a random number. It can also use for test cases.
 * *getRandomText*: it takes a number as an argument to set the limit of characters/words to be generated.
 
-####
+#### MarkovRunnerWithInterface
+
+Contains methods to run, output and displays results using methods from MarkovModel and and EfficientMarkovModel classes. It also contains "compareMethods" function that compares efficiency between the two classes.
+
+#### MarkovModel
+
+It's the first implementation of the Markov Model using words. This method is inefficient because getRandom method can pass for the same set of words multiple times. Each time it will calculate the follow set again, which could take a long time if the training text is long.
+
+#### EfficientMarkovModel
+
+This is the efficient version of the MarkovModel class. It uses a Hashmap to map the word set and its occurrences.
 
 ## Probability Case
 
