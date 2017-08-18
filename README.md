@@ -44,7 +44,7 @@ The case below is based on Confucius text, using 2 consecutive words (N = 2) to 
 
 The program is a bit inefficient since it stumbles on the possibility to check the same sequence of character(s) or word(s) multiple times. The best solution for this case is to map these occurrences to a HashMap.
 
-Comparing efficiency before and after mapping words using Confucius text with a model order of 2, with text length set to 1000 @ seed 42.:
+Comparing efficiency before and after mapping words using Confucius text with a model order of 2, with text length set to 1000 @ seed 42:
 
 Before:
 <div><img src="https://cdn.rawgit.com/bruno78/markov-model/a1259eb6/images/MarkovModelCompare-Orderof2.png" alt="Markov Model Order of 2 words" /></div>
